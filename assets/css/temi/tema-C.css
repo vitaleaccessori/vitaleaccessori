@@ -1,0 +1,8 @@
+/* Tema C - Contrasto navy: fascia punti di forza in blu scuro, etichette in blu acceso */
+:root{--gray:#dde5ee;--gray-soft:#eaeff5;--line:#c6d1de}
+.sub{color:#1d5f9e;font-weight:700}
+.benefits{background:var(--navy)}
+.benefit{border-left-color:rgba(255,255,255,.18)}
+.benefit h2{color:#fff}
+.benefit p{color:#c3d3e6}
+.benefit svg{color:#fff}

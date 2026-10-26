@@ -1,0 +1,8 @@
+/* TEMA ATTIVO: C (contrasto navy) con grigi "decisi". Per cambiare colori, sostituire il contenuto di questo file con quello di uno dei file nella cartella "temi". */
+:root{--vetrina:#dde4ec;--gray:#bac7d6;--line:#a5b4c5;--muted:#3f556f;--gray-soft:#eaeff5}
+.sub{color:#1d5f9e;font-weight:700}
+.benefits{background:var(--navy)}
+.benefit{border-left-color:rgba(255,255,255,.18)}
+.benefit h2{color:#fff}
+.benefit p{color:#c3d3e6}
+.benefit svg{color:#fff}
