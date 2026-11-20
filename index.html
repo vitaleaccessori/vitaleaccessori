@@ -11,8 +11,26 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/tema.css">
+<link rel="stylesheet" href="assets/css/wow.css">
+<script>
+/* versione WOW: prepara le animazioni prima che la pagina compaia; l'intro parte solo alla prima apertura (oppure con ?intro nell'indirizzo) */
+(function(){var d=document.documentElement;d.classList.add('js');var vista=false;try{vista=sessionStorage.getItem('vaIntro')==='1'}catch(e){}
+if(location.search.indexOf('intro')>-1)vista=false;
+if(!vista&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))d.classList.add('intro-on');})();
+</script>
+
 </head>
 <body>
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-win">
+    <div class="intro-frame"></div>
+    <div class="intro-light"><img src="assets/img/logo-vitale.png" alt="" width="568" height="122"></div>
+    <div class="sash l"><i></i></div><div class="sash r"><i></i></div>
+  </div>
+  <p class="intro-tag">Specialisti del serramento</p>
+  <div class="intro-brands"><span class="ib-exte"><img src="assets/img/logo-exte-trasparente.png" alt="" width="261" height="83"></span><span class="ib-gkg"><img src="assets/img/logo-gkg.png" alt="" width="600" height="600"></span><span class="ib-weiss"><img src="assets/img/logo-weiss.png" alt="" width="197" height="140"></span></div>
+  <button type="button" class="intro-skip">Salta intro &rarr;</button>
+</div>
 <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 <header class="site-header">
   <div class="container nav-wrap">
@@ -44,7 +62,16 @@
 <section class="section brands" id="marchi">
   <div class="container brands-layout">
     <div><p class="sub">I nostri marchi</p><h2 class="t">Partner di qualità<br>per i tuoi progetti</h2><p class="d">Lavoriamo con i migliori marchi del settore per offrirti prodotti affidabili e performanti.</p></div>
-    <div class="logos" aria-label="Marchi trattati"><div><img class="exte" src="assets/img/logo-exte.png" alt="Exte" width="261" height="83"></div><div><img class="gkg no-blend" src="assets/img/logo-gkg.png" alt="GKG Grundmeier KG" width="480" height="480"></div><div><img class="weiss no-blend" src="assets/img/logo-weiss.png" alt="Weiss" width="197" height="140"></div></div>
+    <div class="logos" aria-label="Marchi trattati"><div><img class="exte no-blend" src="assets/img/logo-exte-trasparente.png" alt="Exte" width="261" height="83"></div><div><img class="gkg no-blend" src="assets/img/logo-gkg.png" alt="GKG Grundmeier KG" width="480" height="480"></div><div><img class="weiss no-blend" src="assets/img/logo-weiss.png" alt="Weiss" width="197" height="140"></div></div>
+  </div>
+</section>
+
+<section class="stats" aria-label="VITALEACCESSORI in numeri">
+  <div class="container stats-grid">
+    <div class="stat"><span class="num" data-to="3">3</span><span class="lbl">Marchi partner<small>Exte, GKG e Weiss</small></span></div>
+    <div class="stat"><span class="num" data-to="11">11</span><span class="lbl">Linee di prodotto<small>Cassonetti, soglie, colle e altro</small></span></div>
+    <div class="stat"><span class="num" data-to="20">20</span><span class="lbl">Cataloghi da scaricare<small>Sempre disponibili online</small></span></div>
+    <div class="stat"><span class="num" data-to="122">122</span><span class="lbl">Schede tecniche COSMO<small>Tecniche e di sicurezza</small></span></div>
   </div>
 </section>
 
@@ -82,7 +109,7 @@
     <div><p class="sub">Area download</p><h2 class="t">Cataloghi e documentazione</h2><p class="d">Scarica i cataloghi, le schede tecniche e tutta la documentazione dei nostri marchi. Sempre a tua disposizione.</p><a class="btn btn-red" href="download.html">Vai alla sezione download <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
     <div class="dl-cards">
       <!-- Collegare i PDF reali negli href -->
-      <a class="dl" href="download-exte.html"><div class="dl-top"><span class="pdf">PDF</span><img class="dl-logo" src="assets/img/logo-exte.png" alt="" width="261" height="83" style="height:26px"></div><h3>Cataloghi EXTE</h3><p>Sistemi e soluzioni per il serramento</p><small>PDF <span>→</span></small></a>
+      <a class="dl" href="download-exte.html"><div class="dl-top"><span class="pdf">PDF</span><img class="dl-logo no-blend" src="assets/img/logo-exte-trasparente.png" alt="" width="261" height="83" style="height:26px"></div><h3>Cataloghi EXTE</h3><p>Sistemi e soluzioni per il serramento</p><small>PDF <span>→</span></small></a>
       <a class="dl" href="download-gkg.html"><div class="dl-top"><span class="pdf">PDF</span><img class="dl-logo no-blend" src="assets/img/logo-gkg.png" alt="" width="480" height="480" style="height:38px"></div><h3>Cataloghi GKG</h3><p>Prodotti e documentazione tecnica</p><small>PDF <span>→</span></small></a>
       <a class="dl" href="download-weiss.html"><div class="dl-top"><span class="pdf">PDF</span><img class="dl-logo no-blend" src="assets/img/logo-weiss.png" alt="" width="197" height="140" style="height:38px"></div><h3>Cataloghi Weiss</h3><p>Soluzioni e schede dei prodotti</p><small>PDF <span>→</span></small></a>
     </div>
@@ -112,5 +139,6 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/wow.js"></script>
 </body>
 </html>
